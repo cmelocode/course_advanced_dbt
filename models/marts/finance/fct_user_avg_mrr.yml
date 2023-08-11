@@ -1,0 +1,23 @@
+models:
+  - name: fct_user_avg_mrr
+    description: This model contains calculations for the monthly recurring revenue generated per user and subscription for each month.
+    columns:
+      - name: user_id
+        description: '{{ doc("bingeflix_user_id") }}'
+
+      - name: date_month
+        description: month
+
+      - name: subscription_id
+        description: The unique identifier for the subscription.
+
+      - name: surrogate_key
+        description: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_4_periods_mrr_amount
+        description: Rolling average 4 month MRR
+        tests:
+          - not_null
