@@ -114,6 +114,7 @@ Awesome! You are now ready to start the course! 🚀🚀🚀
 
 #### Models
 - The primary key column must have not_null and unique schema tests.
+- Columns that were tested for not_null, uniqueness, and accepted_values in source or staging models do not need to be     retested in downtream models unless there are logic or joins applied that could change the results. Otherwise, below testing guidelines should be followed.
 - All boolean columns must have an accepted_values schema test. The accepted values are true and false.
 - Columns that contain category values must have an accepted_values schema test.
 - Columns that should never be null must have a not_null schema test.

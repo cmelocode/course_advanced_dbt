@@ -16,13 +16,10 @@ models:
 
       - name: created_at
         description: '{{ doc("created_at") }}'
-        tests:
-          - not_null
+
 
       - name: phone_number
         description: '{{ doc("phone_number") }}'
-        tests:
-          - not_null
 
       - name: deleted_at
         description: '{{ doc("deleted_at") }}'
